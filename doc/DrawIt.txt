@@ -183,6 +183,10 @@ single-bar or double-bar mode, respectively.
 
 A message, "[DrawIt]", will appear on the message line.
 
+Calling the \di mapping will start in the mode that you were in last.
+You can set the g:drawit_mode variable to 'N', 'S' or 'D' to start out
+in that mode when starting vim.
+
 
                                                         *drawit-off*
 STOPPING						*drawit-stop* {{{2

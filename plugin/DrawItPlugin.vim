@@ -52,8 +52,7 @@ sil! com -nargs=0 DIdbl  call DrawIt#SetMode('D')
 "         \di : start DrawIt
 "         \ds : stop  DrawIt
 if !hasmapto('<Plug>DrawItStart')
-  "map <unique> <Leader>di <Plug>DrawItStart
-  map <unique> <Leader>di :call DrawIt#SetMode('S')<CR>
+  map <unique> <Leader>di <Plug>DrawItStart
 endif
 noremap <silent>        <Plug>DrawItStart  :set lz<cr>:call DrawIt#DrawItStart()<cr>:set nolz<cr>
 if !hasmapto('<Plug>DrawItStop')
