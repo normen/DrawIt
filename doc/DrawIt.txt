@@ -68,7 +68,7 @@ Copyright:    Copyright (C) 2004-2013 Charles E. Campbell
  || <s-right>    | move cursor right, inserting lines/space as needed        ||
  || <s-up>       | move cursor up, inserting lines/space as needed           ||
  || <s-down>     | move cursor down, inserting lines/space as needed         ||
- || <space>      | toggle into and out of erase mode                         ||
+ || \x           | toggle into and out of erase mode                         ||
  || >            | insert a > and move right    (draw -> arrow)              ||
  || <            | insert a < and move left     (draw <- arrow)              ||
  || ^            | insert a ^ and move up       (draw ^  arrow)              ||
@@ -267,12 +267,12 @@ and vim thereafter recognized the <s-up> command.
 
 
 ERASING							*drawit-erase* {{{2
-<space>
+<Leader>x
 
-The <space> key will toggle DrawIt's erase mode/DrawIt mode.  When in [DrawIt
+The <Leader>x mapping will toggle DrawIt's erase mode/DrawIt mode.  When in [DrawIt
 erase] mode, a message "[DrawIt erase]" will appear and the number pad will
 now cause spaces to be drawn instead of the usual drawing characters.  The
-drawing behavior will be restored when the <space> key toggles DrawIt back
+drawing behavior will be restored when the <Leader>x mapping toggles DrawIt back
 to regular DrawIt mode.
 
 

@@ -254,7 +254,7 @@ fun! DrawIt#DrawItStart(...)
    let usermaplead  = "\\"
   endif
   call SaveUserMaps("bn","","><^v","DrawIt")
-  call SaveUserMaps("bv",usermaplead,"abceflsy","DrawIt")
+  call SaveUserMaps("bv",usermaplead,"abceflsxy","DrawIt")
   call SaveUserMaps("bn","","<c-v>","DrawIt")
   call SaveUserMaps("bn",usermaplead,"cgh><v^","DrawIt")
   call SaveUserMaps("bn","","<left>","DrawIt")
@@ -265,7 +265,6 @@ fun! DrawIt#DrawItStart(...)
   call SaveUserMaps("bn","","<s-right>","DrawIt")
   call SaveUserMaps("bn","","<s-up>","DrawIt")
   call SaveUserMaps("bn","","<s-down>","DrawIt")
-  call SaveUserMaps("bn","","<space>","DrawIt")
   call SaveUserMaps("bn","","<home>","DrawIt")
   call SaveUserMaps("bn","","<end>","DrawIt")
   call SaveUserMaps("bn","","<pageup>","DrawIt")
@@ -364,8 +363,7 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <s-up>		:set lz<CR>:silent! call <SID>MoveUp()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <s-down>		:set lz<CR>:silent! call <SID>MoveDown()<CR>:set nolz<CR>
 
-  "nmap <silent> <buffer> <script> <nowait> <space>		:set lz<CR>:silent! call <SID>DrawErase()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <space>		:set lz<CR>:call <SID>DrawErase()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>x		:set lz<CR>:call <SID>DrawErase()<CR>:set nolz<CR>
 
   nmap <silent> <buffer> <script> <nowait> >			:set lz<CR>:silent! call <SID>DrawSpace('>',1)<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <			:set lz<CR>:silent! call <SID>DrawSpace('<',2)<CR>:set nolz<CR>
@@ -452,7 +450,7 @@ fun! DrawIt#DrawItStart(...)
   exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.LineStyle.Normal<tab>:DInrml			:DInrmle<cr>'
   exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.LineStyle.Single<tab>:DIsngl			:DIsngle<cr>'
   exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.LineStyle.Double<tab>:DIdbl			:DIdbl<cr>'
-  exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.Toggle\ Erase\ Mode<tab><space>		<space>'
+  exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.Toggle\ Erase\ Mode<tab>\\x		<Leader>x'
   exe 'silent! unmenu '.g:DrChipTopLvlMenu.'DrawIt.Start\ DrawIt'
  endif
  
