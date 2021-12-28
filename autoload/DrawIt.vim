@@ -362,9 +362,7 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <s-right>	:set lz<CR>:silent! call <SID>MoveRight()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <s-up>		:set lz<CR>:silent! call <SID>MoveUp()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <s-down>		:set lz<CR>:silent! call <SID>MoveDown()<CR>:set nolz<CR>
-
   nmap <silent> <buffer> <script> <nowait> <Leader>x		:set lz<CR>:call <SID>DrawErase()<CR>:set nolz<CR>
-
   nmap <silent> <buffer> <script> <nowait> >			:set lz<CR>:silent! call <SID>DrawSpace('>',1)<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <			:set lz<CR>:silent! call <SID>DrawSpace('<',2)<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> ^			:set lz<CR>:silent! call <SID>DrawSpace('^',3)<CR>:set nolz<CR>
@@ -373,18 +371,10 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <end>		:set lz<CR>:silent! call <SID>DrawSlantDownLeft()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <pageup>		:set lz<CR>:silent! call <SID>DrawSlantUpRight()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <pagedown>	:set lz<CR>:silent! call <SID>DrawSlantDownRight()<CR>:set nolz<CR>
-
-  nmap <silent> <buffer> <script> <nowait> <Leader>>    :set lz<CR>:silent! call <SID>DrawSpace('▶',1)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader><    :set lz<CR>:silent! call <SID>DrawSpace('◀',2)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>^    :set lz<CR>:silent! call <SID>DrawSpace('▲',3)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>v    :set lz<CR>:silent! call <SID>DrawSpace('▼',4)<CR>:set nolz<CR>
-
-  "these were the original functions they don't seem to work, replaced with the above 4 function calls
-  "nmap <silent> <buffer> <script> <nowait> <Leader>>	:set lz<CR>:silent! call <SID>DrawFatRArrow()<CR>:set nolz<CR>
-  "nmap <silent> <buffer> <script> <nowait> <Leader><	:set lz<CR>:silent! call <SID>DrawFatLArrow()<CR>:set nolz<CR>
-  "nmap <silent> <buffer> <script> <nowait> <Leader>^	:set lz<CR>:silent! call <SID>DrawFatUArrow()<CR>:set nolz<CR>
-  "nmap <silent> <buffer> <script> <nowait> <Leader>v	:set lz<CR>:silent! call <SID>DrawFatDArrow()<CR>:set nolz<CR>
-
+  nmap <silent> <buffer> <script> <nowait> <Leader>>	:set lz<CR>:silent! call <SID>DrawFatRArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader><	:set lz<CR>:silent! call <SID>DrawFatLArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>^	:set lz<CR>:silent! call <SID>DrawFatUArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>v	:set lz<CR>:silent! call <SID>DrawFatDArrow()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <nowait> <Leader>f	:call <SID>Flood()<cr>
   nmap <silent> <buffer> <script> <nowait> <Leader>g	:call <SID>ToggleGrid()<cr>
 
@@ -623,7 +613,7 @@ endfun
 
 " ---------------------------------------------------------------------
 " SetDrawIt: this function allows one to change the drawing characters {{{2
-fun! SetDrawIt(di_vert,di_horiz,di_plus,di_upleft,di_upright,di_cross,di_ellipse,di_Splus)
+fun! SetDrawIt(di_vert,di_horiz,di_plus,di_upleft,di_upright,di_cross,di_ellipse)
 "  call Dfunc("SetDrawIt(vert<".a:di_vert."> horiz<".a:di_horiz."> plus<".a:di_plus."> upleft<".a:di_upleft."> upright<".a:di_upright."> cross<".a:di_cross."> ellipse<".a:di_ellipse.">)")
   let b:di_vert    = a:di_vert
   let b:di_horiz   = a:di_horiz
@@ -632,7 +622,6 @@ fun! SetDrawIt(di_vert,di_horiz,di_plus,di_upleft,di_upright,di_cross,di_ellipse
   let b:di_upright = a:di_upright
   let b:di_cross   = a:di_cross
   let b:di_ellipse = a:di_ellipse
-  let b:di_Splus   = a:di_Splus
 "  call Dret("SetDrawIt")
 endfun
 
