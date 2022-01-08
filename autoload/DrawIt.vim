@@ -248,20 +248,23 @@ fun! DrawIt#DrawItStart(...)
 
   " DrawItStart: save and unmap user maps {{{3
   let b:lastdir    = 1
-  if exists("mapleader")
-   let usermaplead  = mapleader
-  else
-   let usermaplead  = "\\"
+
+  " get map leader in a proper way
+  let usermaplead  = get(g:,"mapleader","\\")
+  " special handling for space
+  if usermaplead == ' '
+    let usermaplead = '<space>'
   endif
+
   call SaveUserMaps("bn","","><^v","DrawIt")
   call SaveUserMaps("bv",usermaplead,"abceflsxy","DrawIt")
   call SaveUserMaps("bn","","<c-v>","DrawIt")
-  call SaveUserMaps("bn",usermaplead,"cgh><v^","DrawIt")
+  call SaveUserMaps("bn",usermaplead,"cghx><v^","DrawIt")
   call SaveUserMaps("bn","","<left>","DrawIt")
   call SaveUserMaps("bn","","<right>","DrawIt")
   call SaveUserMaps("bn","","<up>","DrawIt")
   call SaveUserMaps("bn","","<down>","DrawIt")
-  call SaveUserMaps("bn","","<left>","DrawIt")
+  call SaveUserMaps("bn","","<s-left>","DrawIt")
   call SaveUserMaps("bn","","<s-right>","DrawIt")
   call SaveUserMaps("bn","","<s-up>","DrawIt")
   call SaveUserMaps("bn","","<s-down>","DrawIt")
@@ -341,7 +344,7 @@ fun! DrawIt#DrawItStart(...)
    call SaveUserMaps("bi","","<right>","DrawIt")
    call SaveUserMaps("bi","","<up>","DrawIt")
    call SaveUserMaps("bi","","<down>","DrawIt")
-   call SaveUserMaps("bi","","<left>","DrawIt")
+   call SaveUserMaps("bi","","<s-left>","DrawIt")
    call SaveUserMaps("bi","","<s-right>","DrawIt")
    call SaveUserMaps("bi","","<s-up>","DrawIt")
    call SaveUserMaps("bi","","<s-down>","DrawIt")
