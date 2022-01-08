@@ -68,7 +68,7 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  || <s-right>    | move cursor right, inserting lines/space as needed        ||
  || <s-up>       | move cursor up, inserting lines/space as needed           ||
  || <s-down>     | move cursor down, inserting lines/space as needed         ||
- || <space>      | toggle into and out of erase mode                         ||
+ || \x           | toggle into and out of erase mode                         ||
  || >            | insert a > and move right    (draw -> arrow)              ||
  || <            | insert a < and move left     (draw <- arrow)              ||
  || ^            | insert a ^ and move up       (draw ^  arrow)              ||
