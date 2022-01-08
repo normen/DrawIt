@@ -401,7 +401,7 @@ fun! DrawIt#DrawItStart(...)
   nnoremap <silent> <buffer> <script> <nowait> <c-v>      :call <SID>LeftStart()<CR><c-v>
   vmap     <silent> <buffer> <script> <nowait> <Leader>a  :<c-u>call <SID>CallBox('Arrow')<CR>
   vmap     <silent> <buffer> <script> <nowait> <Leader>b  :<c-u>call <SID>CallBox('DrawBox')<cr>
-  "nmap              <buffer> <script> <nowait> <Leader>c  :call <SID>Canvas()<cr>
+  nmap              <buffer> <script> <nowait> <Leader>c  :call <SID>Canvas()<cr>
   vmap     <silent> <buffer> <script> <nowait> <Leader>l  :<c-u>call <SID>CallBox('DrawPlainLine')<CR>
   vmap     <silent> <buffer> <script> <nowait> <Leader>s  :<c-u>call <SID>Spacer(line("'<"), line("'>"),0)<cr>
 
