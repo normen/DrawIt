@@ -3062,7 +3062,7 @@ fun! s:LeftStart()
   let b:ymouse_start = line('.')
   vnoremap <silent> <buffer> <script> <leftrelease> <leftrelease>:<c-u>call <SID>LeftRelease()<cr>gv
 "  call Dret("s:LeftStart : [".b:ymouse_start.",".b:xmouse_start."]")
-endf!
+endf
 
 " ---------------------------------------------------------------------
 " s:LeftRelease: {{{2
