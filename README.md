@@ -20,6 +20,7 @@ Draw ASCII art in VIM
 This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/index.html#DRAWIT) vim plugin by DrChip.
 
 ### Fork changes
+- small fixes (see below)
 - Removes the `<space>` mapping in favor of `<Leader>x` 
 - Adds the erase-fix for utf-mode from [rigelrozanski](https://github.com/rigelrozanski/DrawIt)
 
@@ -27,6 +28,9 @@ This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/in
 `:h drawit`
 
 ### History
+- **v2022-01-08**
+  - fixed restoring key maps with special leaders (space)
+  - fixed shift-left mapping restoring
 - **v2021-12-28**
   - removed `<space>` mappings
   - added help hint about `g:drawit_mode`
