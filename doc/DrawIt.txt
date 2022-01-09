@@ -225,6 +225,9 @@ g:drawit_insertmode : if this variable exists and is 1 then maps are
 							*g:drawit_mode*
 g:drawit_mode : You can set the `g:drawit_mode` variable to 'N', 'S'
                       or 'D' to start out in that mode when starting vim.
+>
+  let g:drawit_mode = 'S'
+>
 
                                                         *drawit-mappings*
 Users may override the start/stop maps by defining their own mappings in

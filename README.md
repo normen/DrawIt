@@ -36,6 +36,13 @@ To change the default mapping just map it otherwise:
   map <Leader>dx <Plug>DrawItStop
 ```
 
+##### Options
+
+To always start out in utf-single-line mode set
+```
+  let g:drawit_mode = 'S'
+```
+
 ##### Statusline
 
 To embed the DrawIt status in a statusline plugin use this function:
