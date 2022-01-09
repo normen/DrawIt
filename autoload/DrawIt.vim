@@ -256,105 +256,105 @@ fun! DrawIt#DrawItStart(...)
     let usermaplead = '<space>'
   endif
 
-  call SaveUserMaps("bn","","><^v","DrawIt")
-  call SaveUserMaps("bv",usermaplead,"abceflsxy","DrawIt")
-  call SaveUserMaps("bn","","<c-v>","DrawIt")
-  call SaveUserMaps("bn",usermaplead,"cghx><v^","DrawIt")
-  call SaveUserMaps("bn","","<left>","DrawIt")
-  call SaveUserMaps("bn","","<right>","DrawIt")
-  call SaveUserMaps("bn","","<up>","DrawIt")
-  call SaveUserMaps("bn","","<down>","DrawIt")
-  call SaveUserMaps("bn","","<s-left>","DrawIt")
-  call SaveUserMaps("bn","","<s-right>","DrawIt")
-  call SaveUserMaps("bn","","<s-up>","DrawIt")
-  call SaveUserMaps("bn","","<s-down>","DrawIt")
-  call SaveUserMaps("bn","","<home>","DrawIt")
-  call SaveUserMaps("bn","","<end>","DrawIt")
-  call SaveUserMaps("bn","","<pageup>","DrawIt")
-  call SaveUserMaps("bn","","<pagedown>","DrawIt")
-  call SaveUserMaps("bn","","<c-leftdrag>","DrawIt")
-  call SaveUserMaps("bn","","<c-leftmouse>","DrawIt")
-  call SaveUserMaps("bn","","<c-leftrelease>","DrawIt")
-  call SaveUserMaps("bn","","<leftdrag>","DrawIt")
-  call SaveUserMaps("bn","","<leftmouse>","DrawIt")
-  call SaveUserMaps("bn","","<middlemouse>","DrawIt")
-  call SaveUserMaps("bn","","<rightmouse>","DrawIt")
-  call SaveUserMaps("bn","","<s-leftdrag>","DrawIt")
-  call SaveUserMaps("bn","","<s-leftmouse>","DrawIt")
-  call SaveUserMaps("bn","","<s-leftrelease>","DrawIt")
-  call SaveUserMaps("bv","","<c-leftmouse>","DrawIt")
-  call SaveUserMaps("bv","","<leftmouse>","DrawIt")
-  call SaveUserMaps("bv","","<middlemouse>","DrawIt")
-  call SaveUserMaps("bv","","<rightmouse>","DrawIt")
-  call SaveUserMaps("bv","","<s-leftmouse>","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pa","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pb","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pc","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pd","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pe","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pf","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pg","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ph","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pi","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pj","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pk","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pl","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pm","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pn","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":po","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pp","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pq","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pr","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ps","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pt","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pu","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pv","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pw","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":px","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":py","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":pz","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ra","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rb","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rc","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rd","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":re","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rf","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rg","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rh","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ri","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rj","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rk","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rl","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rm","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rn","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ro","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rp","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rq","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rr","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rs","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rt","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ru","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rv","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rw","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rx","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":ry","DrawIt")
-  call SaveUserMaps("bn",usermaplead,":rz","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","><^v","DrawIt")
+  call DrawIt#SaveUserMaps("bv",usermaplead,"abceflsxy","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<c-v>","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,"cghx><v^","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<left>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<right>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<up>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<down>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-left>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-right>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-up>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-down>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<home>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<end>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<pageup>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<pagedown>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<c-leftdrag>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<c-leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<c-leftrelease>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<leftdrag>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<middlemouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<rightmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-leftdrag>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-leftrelease>","DrawIt")
+  call DrawIt#SaveUserMaps("bv","","<c-leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bv","","<leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bv","","<middlemouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bv","","<rightmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bv","","<s-leftmouse>","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pa","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pb","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pc","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pd","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pe","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pf","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pg","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ph","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pi","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pj","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pk","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pl","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pm","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pn","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":po","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pp","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pq","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pr","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ps","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pt","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pu","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pv","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pw","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":px","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":py","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":pz","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ra","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rb","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rc","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rd","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":re","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rf","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rg","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rh","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ri","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rj","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rk","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rl","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rm","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rn","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ro","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rp","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rq","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rr","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rs","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rt","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ru","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rv","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rw","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rx","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":ry","DrawIt")
+  call DrawIt#SaveUserMaps("bn",usermaplead,":rz","DrawIt")
   if exists("g:drawit_insertmode") && g:drawit_insertmode
-   call SaveUserMaps("bi","","<left>","DrawIt")
-   call SaveUserMaps("bi","","<right>","DrawIt")
-   call SaveUserMaps("bi","","<up>","DrawIt")
-   call SaveUserMaps("bi","","<down>","DrawIt")
-   call SaveUserMaps("bi","","<s-left>","DrawIt")
-   call SaveUserMaps("bi","","<s-right>","DrawIt")
-   call SaveUserMaps("bi","","<s-up>","DrawIt")
-   call SaveUserMaps("bi","","<s-down>","DrawIt")
-   call SaveUserMaps("bi","","<home>","DrawIt")
-   call SaveUserMaps("bi","","<end>","DrawIt")
-   call SaveUserMaps("bi","","<pageup>","DrawIt")
-   call SaveUserMaps("bi","","<pagedown>","DrawIt")
-   call SaveUserMaps("bi","","<leftmouse>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<left>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<right>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<up>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<down>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<s-left>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<s-right>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<s-up>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<s-down>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<home>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<end>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<pageup>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<pagedown>","DrawIt")
+   call DrawIt#SaveUserMaps("bi","","<leftmouse>","DrawIt")
   endif
-  call SaveUserMaps("bn","",":\<c-v>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","",":\<c-v>","DrawIt")
 
   " DrawItStart: DrawIt maps (Charles Campbell) {{{3
   nmap <silent> <buffer> <script> <nowait> <left>		:set lz<CR>:silent! call <SID>DrawLeft()<CR>:set nolz<CR>
@@ -499,7 +499,7 @@ fun! DrawIt#DrawItStop()
   endif
 
   " DrawItStop: restore user map(s), if any {{{3
-  call RestoreUserMaps("DrawIt")
+  call DrawIt#RestoreUserMaps("DrawIt")
 
   call s:DrawItRestoreUserSettings()
 
@@ -3208,6 +3208,130 @@ fun! DrawIt#SetBrush(brush) range
 "  call Dret("DrawIt#SetBrush : b:drawit_brush=".b:drawit_brush)
 endfun
 
+" ---------------------------------------------------------------------
+" SaveUserMaps: this function sets up a script-variable (s:restoremap) {{{2
+"          which can be used to restore user maps later with
+"          call RestoreUserMaps()
+"
+"          mapmode - see :help maparg for details (n v o i c l "")
+"                    ex. "n" = Normal
+"                    The letters "b" and "u" are optional prefixes;
+"                    The "u" means that the map will also be unmapped
+"                    The "b" means that the map has a <buffer> qualifier
+"                    ex. "un"  = Normal + unmapping
+"                    ex. "bn"  = Normal + <buffer>
+"                    ex. "bun" = Normal + <buffer> + unmapping
+"                    ex. "ubn" = Normal + <buffer> + unmapping
+"          maplead - see mapchx
+"          mapchx  - "<something>" handled as a single map item.
+"                    ex. "<left>"
+"                  - "string" a string of single letters which are actually
+"                    multiple two-letter maps (using the maplead:
+"                    maplead . each_character_in_string)
+"                    ex. maplead="\" and mapchx="abc" saves user mappings for
+"                        \a, \b, and \c
+"                    Of course, if maplead is "", then for mapchx="abc",
+"                    mappings for a, b, and c are saved.
+"                  - :something  handled as a single map item, w/o the ":"
+"                    ex.  mapchx= ":abc" will save a mapping for "abc"
+"          suffix  - a string unique to your plugin
+"                    ex.  suffix= "DrawIt"
+fun! DrawIt#SaveUserMaps(mapmode,maplead,mapchx,suffix)
+"  call Dfunc("SaveUserMaps(mapmode<".a:mapmode."> maplead<".a:maplead."> mapchx<".a:mapchx."> suffix<".a:suffix.">)")
+
+  if !exists("s:restoremap_{a:suffix}")
+   " initialize restoremap_suffix to null string
+   let s:restoremap_{a:suffix}= ""
+  endif
+
+  " set up dounmap: if 1, then save and unmap  (a:mapmode leads with a "u")
+  "                 if 0, save only
+  let mapmode  = a:mapmode
+  let dounmap  = 0
+  let dobuffer = ""
+  while mapmode =~# '^[bu]'
+   if     mapmode =~# '^u'
+    let dounmap = 1
+    let mapmode = strpart(a:mapmode,1)
+   elseif mapmode =~# '^b'
+    let dobuffer = "<buffer> "
+    let mapmode  = strpart(a:mapmode,1)
+   endif
+  endwhile
+"  call Decho("dounmap=".dounmap."  dobuffer<".dobuffer.">")
+ 
+  " save single map :...something...
+  if strpart(a:mapchx,0,1) == ':'
+"   call Decho("save single map :...something...")
+   let amap= strpart(a:mapchx,1)
+   if amap == "|" || amap == "\<c-v>"
+    let amap= "\<c-v>".amap
+   endif
+   let amap                    = a:maplead.amap
+   let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|:sil! ".mapmode."unmap ".dobuffer.amap
+   if maparg(amap,mapmode) != ""
+    let maprhs                  = substitute(maparg(amap,mapmode),'|','<bar>','ge')
+	let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|:".mapmode."map ".dobuffer.amap." ".maprhs
+   endif
+   if dounmap
+	exe "sil! ".mapmode."unmap ".dobuffer.amap
+   endif
+ 
+  " save single map <something>
+  elseif strpart(a:mapchx,0,1) == '<'
+"   call Decho("save single map <something>")
+   let amap       = a:mapchx
+   if amap == "|" || amap == "\<c-v>"
+    let amap= "\<c-v>".amap
+"	call Decho("amap[[".amap."]]")
+   endif
+   let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|sil! ".mapmode."unmap ".dobuffer.amap
+   if maparg(a:mapchx,mapmode) != ""
+    let maprhs                  = substitute(maparg(amap,mapmode),'|','<bar>','ge')
+	let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|".mapmode."map ".dobuffer.amap." ".maprhs
+   endif
+   if dounmap
+	exe "sil! ".mapmode."unmap ".dobuffer.amap
+   endif
+ 
+  " save multiple maps
+  else
+"   call Decho("save multiple maps")
+   let i= 1
+   while i <= strlen(a:mapchx)
+    let amap= a:maplead.strpart(a:mapchx,i-1,1)
+	if amap == "|" || amap == "\<c-v>"
+	 let amap= "\<c-v>".amap
+	endif
+	let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|sil! ".mapmode."unmap ".dobuffer.amap
+    if maparg(amap,mapmode) != ""
+     let maprhs                  = substitute(maparg(amap,mapmode),'|','<bar>','ge')
+	 let s:restoremap_{a:suffix} = s:restoremap_{a:suffix}."|".mapmode."map ".dobuffer.amap." ".maprhs
+    endif
+	if dounmap
+	 exe "sil! ".mapmode."unmap ".dobuffer.amap
+	endif
+    let i= i + 1
+   endwhile
+  endif
+"  call Dret("SaveUserMaps : s:restoremap_".a:suffix.": ".s:restoremap_{a:suffix})
+endfun
+
+" ---------------------------------------------------------------------
+" RestoreUserMaps: {{{2
+"   Used to restore user maps saved by SaveUserMaps()
+fun! DrawIt#RestoreUserMaps(suffix)
+"  call Dfunc("RestoreUserMaps(suffix<".a:suffix.">)")
+  if exists("s:restoremap_{a:suffix}")
+   let s:restoremap_{a:suffix}= substitute(s:restoremap_{a:suffix},'|\s*$','','e')
+   if s:restoremap_{a:suffix} != ""
+"   	call Decho("exe ".s:restoremap_{a:suffix})
+    exe "sil! ".s:restoremap_{a:suffix}
+   endif
+   unlet s:restoremap_{a:suffix}
+  endif
+"  call Dret("RestoreUserMaps")
+endfun
 " ------------------------------------------------------------------------
 " Modelines: {{{1
 " vim: fdm=marker
