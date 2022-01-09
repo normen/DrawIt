@@ -459,6 +459,14 @@ DRAWIT MODES						*drawit-modes* {{{2
                   you like in your <.vimrc>.  This variable controls where
 		  DrawIt's menu items are placed.
 
+  To see the mode in e.g. Lightline use the following function:
+  >
+  " get drawit mode (Lightline)
+  function DrawItMode()
+    if !exists("b:dodrawit") | return '' | endif
+    return b:dodrawit && b:di_erase ? "ERASE" : b:dodrawit ? "DRAW" : ""
+  endfunction
+<
 
 ==============================================================================
 4. History						*drawit-history* {{{1
