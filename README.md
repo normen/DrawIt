@@ -24,7 +24,41 @@ This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/in
 - Removes the `<space>` mapping in favor of `<Leader>x` 
 
 ### Docs
-`:h drawit`
+
+**Use `:h drawit` to access the full help**
+
+##### Mappings
+  - `<Leader>di` - start DrawIt mode
+  - `<Leader>ds` - stop DrawIt mode
+
+To change the default mapping just map it otherwise:
+```
+  map <Leader>dr <Plug>DrawItStart
+  map <Leader>dx <Plug>DrawItStop
+```
+
+##### Statusline
+
+To embed the DrawIt status in a statusline plugin use this function:
+```
+  function DrawItMode()
+    if !exists("b:dodrawit") | return '' | endif
+    return b:dodrawit && b:di_erase ? "ERASE" : b:dodrawit ? "DRAW" : ""
+  endfunction
+```
+
+Then e.g. for [lightline]() use:
+```
+let g:lightline = { 
+  \   'left': [
+  \             [ 'mode', 'paste', 'drawit_mode'],
+  (....)
+  \           ],
+  \ 'component_function': {
+  \   'drawit_mode': 'DrawItMode',
+  \ },
+\ }
+```
 
 ### History
 - **v2022-01-09**
