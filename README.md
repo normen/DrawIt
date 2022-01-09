@@ -17,6 +17,7 @@ This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/in
 ### Fork changes
 - Removes the `<space>` mapping in favor of `<Leader>x` 
 - fix mapping restoration
+- fix utf erase bug
 - updated documentation
 - some fixes and cleanups (see `:h`)
 - based on latest version 15a from DrChip.org
