@@ -42,8 +42,8 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  || Starting &   |                                                           ||
  || Stopping     | Explanation                      Links:                   ||
  ++--------------+-----------------------------------------------------------++
- ||  \di         | start DrawIt (\ = <leader>)      |drawit-start|             ||
- ||  \ds         | stop  DrawIt                     |drawit-stop|              ||
+ ||  <Leader>di  | start DrawIt                     |drawit-start|             ||
+ ||  <Leader>ds  | stop  DrawIt                     |drawit-stop|              ||
  ||  :DIstart    | start DrawIt                     |drawit-start|             ||
  ||  :DIstart S  | start DrawIt in single-bar mode  |drawit-start|             ||
  ||  :DIstart D  | start DrawIt in double-bar mode  |drawit-start|             ||
@@ -58,7 +58,7 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  ||              | The DrawIt routines use a replace, move, and              ||
  ||              | replace/insert strategy.  The package also lets one insert||
  ||              | spaces, draw arrows by using the following characters or  ||
- ||              | keypad characters:                                        ||
+ ||              | keypad characters (\ = <Leader>)                          ||
  ||              |                                                           ||
  || <left>       | move and draw left                         |drawit-drawing| ||
  || <right>      | move and draw right, inserting lines/space as needed      ||
@@ -144,21 +144,17 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
 
 INSTALLING						*drawit-install*
 
-DrawIt is distributed as a |vimball|; to install DrawIt: >
+This fork of DrChips DrawIt is availabe through 
 
-	vi DrawIt.vba
-	:so %
-	:q
+https://github.com/normen/DrawIt
 
-These commands will put DrawIt into your .vim/plugin and .vim/autoload
-directories.  Only a little bit of DrawIt (.vim/plugin/DrawItPlugin.vim)
-is actually always loaded; only when DrawIt is used will the main portion of
-DrawIt be loaded.  Thus DrawIt supports fast vim startup.
-
+To install using e.g. |Plug|, add this to your `vimrc`
+>
+  Plug 'normen/DrawIt'
 
 STARTING						*drawit-start* {{{2
 
-\di           (starts in normal     drawing mode)       *drawit-\di*
+<Leader>di    (starts in normal     drawing mode)       *drawit-\di*
 :DrawIt       (starts in normal     drawing mode)       *drawit-DrawIt*
 :DIstart      (starts in normal     drawing mode)       *drawit-DIstart*
 :DIstart S    (starts in single-bar drawing mode)
@@ -187,7 +183,7 @@ how to integrate the status with a statusline plugin.
 
                                                         *drawit-off*
 STOPPING						*drawit-stop* {{{2
-\ds
+<Leader>ds
 :DrawIt!
 :DIstop
 :DIoff
@@ -479,6 +475,13 @@ DRAWIT MODES						*drawit-modes* {{{2
 ==============================================================================
 4. History						*drawit-history* {{{1
 
+        15n1    Jan 08, 2022    * forked to https://github.com/normen/DrawIt
+                                * make compatible with <space> as <Leader>
+                                * fix for map restoring
+                                * fix for utf erase mode
+                                * update help / options
+                                * remove cecutil
+        15a     Jan 07, 2020    * updated to v15a from https://drchip.org
 	14	Dec 03, 2013	* added commands for visual block mode
 				  |:DIarrow| |:DIbox| |:DIcanvas| etc
 				* Implemented |:DIgrid|
