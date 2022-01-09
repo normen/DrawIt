@@ -42,7 +42,7 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  || Starting &   |                                                           ||
  || Stopping     | Explanation                      Links:                   ||
  ++--------------+-----------------------------------------------------------++
- ||  \di         | start DrawIt                     |drawit-start|             ||
+ ||  \di         | start DrawIt (\ = <leader>)      |drawit-start|             ||
  ||  \ds         | stop  DrawIt                     |drawit-stop|              ||
  ||  :DIstart    | start DrawIt                     |drawit-start|             ||
  ||  :DIstart S  | start DrawIt in single-bar mode  |drawit-start|             ||
