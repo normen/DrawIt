@@ -170,7 +170,8 @@ STARTING						*drawit-start* {{{2
 DrawIt supports a number of different ways to start up as shown above; in
 addition, you may use gvim and the DrChip menu.
 
-To stop DrawIt, use \ds (*d*rawit *s*top) or :DIstop.
+To stop DrawIt, use \ds (*d*rawit *s*top) or :DIstop. See |drawit-mappings| on
+how to change the default mappings.
 
 DrawIt also supports the use of |mapleader|; with that, you may specify
 what you with as the maps' leading kickoff character.  This document
@@ -181,12 +182,8 @@ With a trailing 'D', :DIstart will begin in double-bar mode (see |drawit-dbl|).
 Similarly, :DIsngl and :DIdbl will start DrawIt as well as begin in
 single-bar or double-bar mode, respectively.
 
-A message, "[DrawIt]", will appear on the message line.
-
-Calling the \di mapping will start in the mode that you were in last.
-You can set the g:drawit_mode variable to 'N', 'S' or 'D' to start out
-in that mode when starting vim.
-
+A message, "[DrawIt]", will appear on the message line. See |drawit-modes| for
+how to integrate the status with a statusline plugin.
 
                                                         *drawit-off*
 STOPPING						*drawit-stop* {{{2
@@ -228,6 +225,17 @@ g:drawit_insertmode : if this variable exists and is 1 then maps are
 	              made which make cursor-control drawing available
 		      while in insert mode, too.  Otherwise, DrawIt's
 		      maps only affect normal mode.
+
+							*g:drawit_mode*
+g:drawit_mode : You can set the `g:drawit_mode` variable to 'N', 'S'
+                      or 'D' to start out in that mode when starting vim.
+
+                                                        *drawit-mappings*
+Users may override the start/stop maps by defining their own mappings in
+their .vimrc to <Plug>DrawItStart and/or <Plug>DrawItStop.  By default:
+>
+  map <unique> <Leader>di <Plug>DrawItStart
+  map <unique> <Leader>ds <Plug>DrawItStop
 
 DRAWING							*drawit-drawing* {{{2
 
