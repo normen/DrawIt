@@ -17,10 +17,8 @@ This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/in
 ### Fork changes
 - removes the `<space>` mapping in favor of `<Leader>x` 
 - adds `<shift-hjkl>` to draw
-- fix mapping restoration
-- fix utf erase bug
+- fixes for known bugs (see `:h drawit-history`)
 - updated documentation
-- some fixes and cleanups (see `:h`)
 - based on latest version 15a from DrChip.org
 
 ### Docs
