@@ -87,6 +87,11 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  ||<s-leftmouse> | drag and draw with current brush            |drawit-brush|  ||
  ||<c-leftmouse> | drag and move current brush                 |drawit-brush|  ||
  ||              |                                                           ||
+ || \p{a-z}      | block paste from register {a-z}, blanks don't overwrite   ||
+ || \r{a-z}      | block paste from register {a-z}, blanks overwrite         ||
+ ||              |                                                           ||
+ ||              | Registers 0 and * can also be pasted this way             ||
+ ||              |                                                           ||
  ||==============+===========================================================++
  ||Visual Cmds   | Explanation                                               ||
  ||--------------+-----------------------------------------------------------++
@@ -483,6 +488,7 @@ DRAWIT MODES						*drawit-modes* {{{2
 
         15n2    Jan 10, 2022    * added shift-hjkl mapping for drawing
                                 * properly restore lazyredraw mode
+                                * allow block-pasting from 0 and * registers
         15n1    Jan 08, 2022    * forked to https://github.com/normen/DrawIt
                                 * make compatible with <space> as <Leader>
                                 * fix for map restoring
