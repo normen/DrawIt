@@ -2141,7 +2141,7 @@ endfun
 "                 |
 fun! s:DrawFatUArrow()
 "  call Dfunc("s:DrawFatUArrow()")
-  if g:drawit_mode == 'N' || !b:di_bfxchr
+  if g:drawit_mode == 'N' || !b:di_gfxchr
    call s:MoveUp()
    norm! r_
    call s:MoveRight()

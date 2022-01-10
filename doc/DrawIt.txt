@@ -482,6 +482,7 @@ DRAWIT MODES						*drawit-modes* {{{2
                                 * make compatible with <space> as <Leader>
                                 * fix for map restoring
                                 * fix for utf erase mode
+                                * fix utf up arrow
                                 * properly restore lazyredraw mode
                                 * update help / options
                                 * remove cecutil
