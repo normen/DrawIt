@@ -163,8 +163,8 @@ To install using e.g. |Plug|, add this to your `vimrc`
 
 STARTING						*drawit-start* {{{2
 
-<Leader>di    (starts in normal     drawing mode)       *drawit-\di*
-:DrawIt       (starts in normal     drawing mode)       *drawit-DrawIt*
+<Leader>di    (starts in last       drawing mode)       *drawit-\di*
+:DrawIt       (starts in last       drawing mode)       *drawit-DrawIt*
 :DIstart      (starts in normal     drawing mode)       *drawit-DIstart*
 :DIstart S    (starts in single-bar drawing mode)
 :DIstart D    (starts in double-bar drawing mode)

@@ -25,6 +25,14 @@ This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/in
 
 **Use `:h drawit` to access the full help**
 
+#### Install
+
+Using vim-plug:
+```
+  Plug 'normen/DrawIt'
+```
+
+#### Setup
 ##### Mappings
   - `<Leader>di` - start DrawIt mode
   - `<Leader>ds` - stop DrawIt mode
