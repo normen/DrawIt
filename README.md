@@ -1,11 +1,8 @@
 # DrawIt.vim
-
-Draw ASCII art in VIM
-
 ```
-┌──────────┐        ┌──────┐        ╔═════╗
-│VIM Plugin│--for-->│arrows│──and──>║boxes║
-└──────────┘   |    └──────┘        ╚═════╝
+╔══════════╗        ┌──────┐        ┌─────┐
+║VIM Plugin║--for-->│arrows│──and──>│boxes│
+╚══════════╝   |    └──────┘        └─────┘
             ┌──▼────┐ ^     ╲
             │drawing├─┘      and lines!
             └───────┘     
@@ -37,7 +34,7 @@ Using [vim-plug](https://github.com/junegunn/vim-plug):
   - `<Leader>di` - start DrawIt mode
   - `<Leader>ds` - stop DrawIt mode
 
-To change the default mapping just map it otherwise:
+To change/free the default mapping just map these functions otherwise, the defaults won't be used.
 ```
   map <Leader>dr <Plug>DrawItStart
   map <Leader>dx <Plug>DrawItStop
