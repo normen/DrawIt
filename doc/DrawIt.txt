@@ -482,6 +482,7 @@ DRAWIT MODES						*drawit-modes* {{{2
                                 * make compatible with <space> as <Leader>
                                 * fix for map restoring
                                 * fix for utf erase mode
+                                * properly restore lazyredraw mode
                                 * update help / options
                                 * remove cecutil
         15a     Jan 07, 2020    * updated to v15a from https://drchip.org

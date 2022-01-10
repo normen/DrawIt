@@ -38,9 +38,9 @@ set cpo&vim
 " ---------------------------------------------------------------------
 " Public Interface: {{{1
 " commands:
-com! -nargs=0 -bang DrawIt   	set lz|if <bang>0|call DrawIt#DrawItStop()|else|call DrawIt#DrawItStart()|endif|set nolz
-com! -nargs=?       DIstart  	set lz|call DrawIt#DrawItStart(<q-args>)|set nolz
-com! -nargs=0       DIstop   	set lz|call DrawIt#DrawItStop()|set nolz
+com! -nargs=0 -bang DrawIt   	if <bang>0|call DrawIt#DrawItStop()|else|call DrawIt#DrawItStart()|endif
+com! -nargs=?       DIstart  	call DrawIt#DrawItStart(<q-args>)
+com! -nargs=0       DIstop   	call DrawIt#DrawItStop()
 
 " commands: available only when not pre-defined
 sil! com -nargs=0 DInrml call DrawIt#SetMode('N')
@@ -54,11 +54,11 @@ sil! com -nargs=0 DIdbl  call DrawIt#SetMode('D')
 if !hasmapto('<Plug>DrawItStart')
   map <unique> <Leader>di <Plug>DrawItStart
 endif
-noremap <silent>        <Plug>DrawItStart  :set lz<cr>:call DrawIt#DrawItStart()<cr>:set nolz<cr>
+noremap <silent>        <Plug>DrawItStart  :call DrawIt#DrawItStart()<cr>
 if !hasmapto('<Plug>DrawItStop')
   map <unique> <Leader>ds <Plug>DrawItStop
 endif
-noremap <silent> <Plug>DrawItStop :set lz<cr>:call DrawIt#DrawItStop()<cr>:set nolz<cr>
+noremap <silent> <Plug>DrawItStop :call DrawIt#DrawItStop()<cr>
 
 " ---------------------------------------------------------------------
 " DrChip Menu Support: {{{1

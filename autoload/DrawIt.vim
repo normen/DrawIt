@@ -106,6 +106,12 @@ fun! DrawIt#DrawItStart(...)
   " indicate in DrawIt mode
   echo "[DrawIt]"
 
+  " DrawItStart: save lazyredraw state {{{3
+  if !exists("b:drawit_lazyredraw")
+   let b:drawit_lazyredraw= &lazyredraw
+  endif
+  setl lz
+
   " DrawItStart: turn on mouse {{{3
   if !exists("b:drawit_keep_mouse")
    let b:drawit_keep_mouse= &mouse
@@ -357,27 +363,27 @@ fun! DrawIt#DrawItStart(...)
   call DrawIt#SaveUserMaps("bn","",":\<c-v>","DrawIt")
 
   " DrawItStart: DrawIt maps (Charles Campbell) {{{3
-  nmap <silent> <buffer> <script> <nowait> <left>		:set lz<CR>:silent! call <SID>DrawLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <right>		:set lz<CR>:silent! call <SID>DrawRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <up>			:set lz<CR>:silent! call <SID>DrawUp()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <down>		:set lz<CR>:silent! call <SID>DrawDown()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <s-left>		:set lz<CR>:silent! call <SID>MoveLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <s-right>	:set lz<CR>:silent! call <SID>MoveRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <s-up>		:set lz<CR>:silent! call <SID>MoveUp()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <s-down>		:set lz<CR>:silent! call <SID>MoveDown()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>x		:set lz<CR>:call <SID>DrawErase()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> >			:set lz<CR>:silent! call <SID>DrawSpace('>',1)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <			:set lz<CR>:silent! call <SID>DrawSpace('<',2)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> ^			:set lz<CR>:silent! call <SID>DrawSpace('^',3)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> v			:set lz<CR>:silent! call <SID>DrawSpace('v',4)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <home>		:set lz<CR>:silent! call <SID>DrawSlantUpLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <end>		:set lz<CR>:silent! call <SID>DrawSlantDownLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <pageup>		:set lz<CR>:silent! call <SID>DrawSlantUpRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <pagedown>	:set lz<CR>:silent! call <SID>DrawSlantDownRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>>	:set lz<CR>:silent! call <SID>DrawFatRArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader><	:set lz<CR>:silent! call <SID>DrawFatLArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>^	:set lz<CR>:silent! call <SID>DrawFatUArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <nowait> <Leader>v	:set lz<CR>:silent! call <SID>DrawFatDArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <nowait> <left>		:silent! call <SID>DrawLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <right>		:silent! call <SID>DrawRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <up>			:silent! call <SID>DrawUp()<CR>
+  nmap <silent> <buffer> <script> <nowait> <down>		:silent! call <SID>DrawDown()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-left>		:silent! call <SID>MoveLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-right>	:silent! call <SID>MoveRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-up>		:silent! call <SID>MoveUp()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-down>		:silent! call <SID>MoveDown()<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>x		:call <SID>DrawErase()<CR>
+  nmap <silent> <buffer> <script> <nowait> >			:silent! call <SID>DrawSpace('>',1)<CR>
+  nmap <silent> <buffer> <script> <nowait> <			:silent! call <SID>DrawSpace('<',2)<CR>
+  nmap <silent> <buffer> <script> <nowait> ^			:silent! call <SID>DrawSpace('^',3)<CR>
+  nmap <silent> <buffer> <script> <nowait> v			:silent! call <SID>DrawSpace('v',4)<CR>
+  nmap <silent> <buffer> <script> <nowait> <home>		:silent! call <SID>DrawSlantUpLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <end>		:silent! call <SID>DrawSlantDownLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <pageup>		:silent! call <SID>DrawSlantUpRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <pagedown>	:silent! call <SID>DrawSlantDownRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>>	:silent! call <SID>DrawFatRArrow()<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader><	:silent! call <SID>DrawFatLArrow()<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>^	:silent! call <SID>DrawFatUArrow()<CR>
+  nmap <silent> <buffer> <script> <nowait> <Leader>v	:silent! call <SID>DrawFatDArrow()<CR>
   nmap <silent> <buffer> <script> <nowait> <Leader>f	:call <SID>Flood()<cr>
   nmap <silent> <buffer> <script> <nowait> <Leader>g	:call <SID>ToggleGrid()<cr>
 
@@ -413,8 +419,8 @@ fun! DrawIt#DrawItStart(...)
   let allreg= "abcdefghijklmnopqrstuvwxyz"
   while strlen(allreg) > 0
    let ireg= strpart(allreg,0,1)
-   exe "nmap <silent> <buffer> <nowait> <Leader>p".ireg.'  :<c-u>set lz<cr>:silent! call <SID>PutBlock("'.ireg.'",0)<cr>:set nolz<cr>'
-   exe "nmap <silent> <buffer> <nowait> <Leader>r".ireg.'  :<c-u>set lz<cr>:silent! call <SID>PutBlock("'.ireg.'",1)<cr>:set nolz<cr>'
+   exe "nmap <silent> <buffer> <nowait> <Leader>p".ireg.'  :silent! call <SID>PutBlock("'.ireg.'",0)<cr>'
+   exe "nmap <silent> <buffer> <nowait> <Leader>r".ireg.'  :silent! call <SID>PutBlock("'.ireg.'",1)<cr>'
    let allreg= strpart(allreg,1)
   endwhile
 
@@ -471,6 +477,12 @@ fun! DrawIt#DrawItStop()
    echo "[DrawIt off]"
 "   call Dret("DrawItStop")
    return
+  endif
+
+  " DrawItStop: restore lazyredraw {{{3
+  if exists("b:drawit_lazyredraw")
+   let &lazyredraw= b:drawit_lazyredraw
+   unlet b:drawit_lazyredraw
   endif
 
   " DrawItStop: restore mouse {{{3
