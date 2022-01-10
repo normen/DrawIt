@@ -278,6 +278,10 @@ fun! DrawIt#DrawItStart(...)
   call DrawIt#SaveUserMaps("bn","","<s-l>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<s-k>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<s-j>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-z>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-u>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-b>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-n>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<home>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<end>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<pageup>","DrawIt")
@@ -379,6 +383,10 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <s-l>		:silent! call <SID>DrawRight()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-k>			:silent! call <SID>DrawUp()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-j>		:silent! call <SID>DrawDown()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-z>		:silent! call <SID>DrawSlantUpLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-u>		:silent! call <SID>DrawSlantUpRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-b>			:silent! call <SID>DrawSlantDownLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-n>		:silent! call <SID>DrawSlantDownRight()<CR>
   nmap <silent> <buffer> <script> <nowait> <Leader>x		:call <SID>DrawErase()<CR>
   nmap <silent> <buffer> <script> <nowait> >			:silent! call <SID>DrawSpace('>',1)<CR>
   nmap <silent> <buffer> <script> <nowait> <			:silent! call <SID>DrawSpace('<',2)<CR>
