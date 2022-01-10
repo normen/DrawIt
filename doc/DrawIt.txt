@@ -493,10 +493,11 @@ DRAWIT MODES						*drawit-modes* {{{2
                                 * added shift-yubn mapping for drawing slants
                                 * properly restore lazyredraw mode
                                 * allow block-pasting from 0 and * registers
+                                * fix UTF blockpaste (f4t-t0ny)
         15n1    Jan 08, 2022    * forked to https://github.com/normen/DrawIt
                                 * make compatible with <space> as <Leader>
                                 * fix for map restoring
-                                * fix for utf erase mode
+                                * fix for utf erase mode (rigelrozanski)
                                 * fix utf up arrow
                                 * fix <s-left> mapping
                                 * update help / options

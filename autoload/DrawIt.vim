@@ -2545,46 +2545,34 @@ fun! s:PutBlock(block,replace)
   call s:AutoCanvas(curline-1,curline + blockrows+1,curcol + blockcols)
 
   let iblock= 0
-  while iblock < blocklen
-   " the following logic should permit 1, 2, or 4 byte glyphs (I've only tested it with 1 and 2)
-  	let chr= strpart(block,iblock,4)
-	if char2nr(chr) <= 255
-  	 let chr= strpart(block,iblock,1)
-	elseif char2nr(chr) <= 65536
-  	 let chr= strpart(block,iblock,2)
-	 let iblock= iblock + 1
-	else
-	 let iblock= iblock + 3
-	endif
-"	call Decho("iblock=".iblock." chr#".char2nr(chr)."<".string(chr).">")
+  for chr in split(block, '\zs')
+    if char2nr(chr) == 10
+     " handle newline
+     let drawit_line= drawit_line + 1
+       if b:drawit_col_{s:saveposn_count} == 0
+        exe "norm! ".drawit_line."G0"
+       else
+        exe "norm! ".drawit_line."G0".b:drawit_col_{s:saveposn_count}."l"
+       endif
 
-	if char2nr(chr) == 10
-	 " handle newline
-	 let drawit_line= drawit_line + 1
-     if b:drawit_col_{s:saveposn_count} == 0
-      exe "norm! ".drawit_line."G0"
+    elseif a:replace == 2
+     " replace all drawing characters with blanks
+     if match(chr,drawchars) != -1
+      norm! r l
      else
-      exe "norm! ".drawit_line."G0".b:drawit_col_{s:saveposn_count}."l"
+      norm! l
      endif
 
-	elseif a:replace == 2
-	 " replace all drawing characters with blanks
-	 if match(chr,drawchars) != -1
-	  norm! r l
-	 else
-	  norm! l
-	 endif
+    elseif chr == ' ' && a:replace == 0
+     " allow blanks to be transparent
+     norm! l
 
-	elseif chr == ' ' && a:replace == 0
-	 " allow blanks to be transparent
-	 norm! l
-
-	else
-	 " usual replace character
-	 exe "norm! r".chr."l"
-	endif
+    else
+     " usual replace character
+     exe "norm! r".chr."l"
+    endif
   	let iblock = iblock + 1
-  endwhile
+  endfor
   call s:RestorePosn()
 
 "  call Dret("s:PutBlock")
