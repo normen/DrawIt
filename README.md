@@ -15,7 +15,8 @@ Draw ASCII art in VIM
 This is my fork of the fantastic [DrawIt](http://www.drchip.org/astronaut/vim/index.html#DRAWIT) vim plugin by DrChip.
 
 ### Fork changes
-- Removes the `<space>` mapping in favor of `<Leader>x` 
+- removes the `<space>` mapping in favor of `<Leader>x` 
+- adds `<shift-hjkl>` to draw
 - fix mapping restoration
 - fix utf erase bug
 - updated documentation

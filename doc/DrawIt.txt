@@ -68,6 +68,9 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  || <s-right>    | move cursor right, inserting lines/space as needed        ||
  || <s-up>       | move cursor up, inserting lines/space as needed           ||
  || <s-down>     | move cursor down, inserting lines/space as needed         ||
+ ||              |                                                           ||
+ ||              | You can also use <shift-hjkl> to draw and hjkl to move.   ||
+ ||              |                                                           ||
  || \x           | toggle into and out of erase mode                         ||
  || >            | insert a > and move right    (draw -> arrow)              ||
  || <            | insert a < and move left     (draw <- arrow)              ||
@@ -478,12 +481,13 @@ DRAWIT MODES						*drawit-modes* {{{2
 ==============================================================================
 4. History						*drawit-history* {{{1
 
+        15n2    Jan 10, 2022    * added shift-hjkl mapping for drawing
+                                * properly restore lazyredraw mode
         15n1    Jan 08, 2022    * forked to https://github.com/normen/DrawIt
                                 * make compatible with <space> as <Leader>
                                 * fix for map restoring
                                 * fix for utf erase mode
                                 * fix utf up arrow
-                                * properly restore lazyredraw mode
                                 * update help / options
                                 * remove cecutil
         15a     Jan 07, 2020    * updated to v15a from https://drchip.org

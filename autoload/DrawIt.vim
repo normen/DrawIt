@@ -274,6 +274,10 @@ fun! DrawIt#DrawItStart(...)
   call DrawIt#SaveUserMaps("bn","","<s-right>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<s-up>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<s-down>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-h>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-l>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-k>","DrawIt")
+  call DrawIt#SaveUserMaps("bn","","<s-j>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<home>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<end>","DrawIt")
   call DrawIt#SaveUserMaps("bn","","<pageup>","DrawIt")
@@ -371,6 +375,10 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <s-right>	:silent! call <SID>MoveRight()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-up>		:silent! call <SID>MoveUp()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-down>		:silent! call <SID>MoveDown()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-h>		:silent! call <SID>DrawLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-l>		:silent! call <SID>DrawRight()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-k>			:silent! call <SID>DrawUp()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-j>		:silent! call <SID>DrawDown()<CR>
   nmap <silent> <buffer> <script> <nowait> <Leader>x		:call <SID>DrawErase()<CR>
   nmap <silent> <buffer> <script> <nowait> >			:silent! call <SID>DrawSpace('>',1)<CR>
   nmap <silent> <buffer> <script> <nowait> <			:silent! call <SID>DrawSpace('<',2)<CR>
@@ -393,7 +401,7 @@ fun! DrawIt#DrawItStart(...)
    imap <silent> <buffer> <script> <nowait> <right>    <Esc><right>a
    imap <silent> <buffer> <script> <nowait> <up>       <Esc><up>a
    imap <silent> <buffer> <script> <nowait> <down>     <Esc><down>a
-   imap <silent> <buffer> <script> <nowait> <left>     <Esc><left>a
+   imap <silent> <buffer> <script> <nowait> <s-left>     <Esc><s-left>a
    imap <silent> <buffer> <script> <nowait> <s-right>  <Esc><s-right>a
    imap <silent> <buffer> <script> <nowait> <s-up>     <Esc><s-up>a
    imap <silent> <buffer> <script> <nowait> <s-down>   <Esc><s-down>a
