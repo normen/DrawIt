@@ -384,6 +384,7 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <nowait> <s-k>			:silent! call <SID>DrawUp()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-j>		:silent! call <SID>DrawDown()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-z>		:silent! call <SID>DrawSlantUpLeft()<CR>
+  nmap <silent> <buffer> <script> <nowait> <s-y>		:silent! call <SID>DrawSlantUpLeft()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-u>		:silent! call <SID>DrawSlantUpRight()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-b>			:silent! call <SID>DrawSlantDownLeft()<CR>
   nmap <silent> <buffer> <script> <nowait> <s-n>		:silent! call <SID>DrawSlantDownRight()<CR>

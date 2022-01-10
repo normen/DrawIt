@@ -70,7 +70,7 @@ Copyright:    Copyright (C) 2018 Charles E. Campbell
  || <s-down>     | move cursor down, inserting lines/space as needed         ||
  ||              |                                                           ||
  ||              | You can also use <shift-hjkl> to draw and hjkl to move.   ||
- ||              | Use <shift-zubn> to draw slanted lines.                   ||
+ ||              | Use <shift-yubn> to draw slanted lines.                   ||
  ||              |                                                           ||
  || \x           | toggle into and out of erase mode                         ||
  || >            | insert a > and move right    (draw -> arrow)              ||
@@ -490,7 +490,7 @@ DRAWIT MODES						*drawit-modes* {{{2
 4. History						*drawit-history* {{{1
 
         15n2    Jan 10, 2022    * added shift-hjkl mapping for drawing
-                                * added shift-zubn mapping for drawing slants
+                                * added shift-yubn mapping for drawing slants
                                 * properly restore lazyredraw mode
                                 * allow block-pasting from 0 and * registers
         15n1    Jan 08, 2022    * forked to https://github.com/normen/DrawIt
