@@ -31,7 +31,7 @@
 if &cp || exists("g:loaded_DrawItPlugin")
  finish
 endif
-let g:loaded_DrawItPlugin = "v15a"
+let g:loaded_DrawItPlugin = "v15n2"
 let s:keepcpo             = &cpo
 set cpo&vim
 

@@ -4,7 +4,7 @@
 " Maintainer:	Charles E Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Authors:		Charles E. Campbell
 "   			Sylvain Viart (molo@multimania.com)
-" Version:		15a		ASTRO-ONLY
+" Version:		15n2		github.com/normen fork
 " Date:			Jan 05, 2018 - Jan 07, 2020
 "
 " Quick Setup: {{{1
@@ -42,7 +42,7 @@
 if &cp || exists("g:loaded_DrawIt")
  finish
 endif
-let g:loaded_DrawIt= "v15a"
+let g:loaded_DrawIt= "v15n2"
 if v:version < 700
  echohl WarningMsg
  echo "***warning*** this version of DrawIt needs vim 7.0"
