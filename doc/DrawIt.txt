@@ -494,6 +494,7 @@ DRAWIT MODES						*drawit-modes* {{{2
                                 * fix for map restoring
                                 * fix for utf erase mode
                                 * fix utf up arrow
+                                * fix <s-left> mapping
                                 * update help / options
                                 * remove cecutil
         15a     Jan 07, 2020    * updated to v15a from https://drchip.org
