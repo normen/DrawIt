@@ -40,7 +40,7 @@ set cpo&vim
 " commands:
 com! -nargs=0 -bang DrawIt   	if <bang>0|call DrawIt#DrawItStop()|else|call DrawIt#DrawItStart()|endif
 com! -nargs=?       DIstart  	call DrawIt#DrawItStart(<q-args>)
-com! -nargs=0       DIstop   	call DrawIt#DrawItStop()
+com! -nargs=0       DIstop   	call DrawIt#DrawItStop()
 
 " commands: available only when not pre-defined
 sil! com -nargs=0 DInrml call DrawIt#SetMode('N')
